@@ -1,0 +1,184 @@
+body {
+    background-color: rgb(22, 22, 22);
+    overflow: hidden;
+    padding: 0;
+    margin:  0;
+}
+.Image {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.ImageBlue {
+    filter: blur(4px);
+
+}
+.BGcursor {
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(51, 20, 161,0.4);
+	border: none;
+	border-radius: 50%;
+	pointer-events: none;
+}
+.BGcursorRainbowFill {
+    animation: bgcolor 1s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+.BGcursorBlur {
+    backdrop-filter: blur(3.5px);
+}
+.BGcursorGrayscale {
+    backdrop-filter: grayscale(1);
+}
+.BGcursorHueRotate {
+    animation: HueRotate  1s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+.BTN {
+	background-color: #380ecf;
+	color: white;
+	width: 97%;
+	height: 35px;
+	border: 25px;
+	text-decoration: none;
+	text-align: center;
+	border: none;
+	outline: none;
+	transition: all 0.5s;
+	transition: 0.5s;
+    margin: 5px;
+    float:left;
+}
+.BTN:hover {
+	border-radius: 11.5px;
+	text-decoration: none;
+	text-align: center;
+}
+.checkmark {
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: #380ecf;
+}
+.slider {
+    height:5px;
+    appearance: none;
+    width:50%;
+    background-color:#555;
+    border-radius: 30px;
+    margin: 10px;
+    outline: none;
+    margin-top: 15px;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color:  #380ecf;
+    cursor: pointer;
+}
+.Modal {
+	width: 100%;
+	height: 100%;
+	display:none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 80px;
+	left: 0;
+	top: 0;
+    backdrop-filter: blur(6px);
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.ModalContent {
+	padding: 10px;
+	background-color: rgb(22, 22, 22);
+    color: white;
+	margin: auto;
+	height: 285px;
+	width: 20%;
+	border-radius: 15px;
+}
+.ModalContent label {
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 20px;
+    color: white;
+    padding-left: 9;
+}
+.ModalClose {
+	float: right;
+	cursor: pointer;
+    padding-top: 3px;
+}
+.ModalTitle {
+	text-align: center;
+    font-size: 25px;
+	font-family: 'Rosario', sans-serif;
+}
+.ModalClose:hover {
+	-webkit-transform: rotate(12deg);
+	transform: rotate(12deg);
+}
+.ColourPicker {
+    outline:  none;
+    border: none;
+    -webkit-appearance: none;
+	width: 50%;
+	height: 32px;
+    padding: 5;
+    background: none;
+    border-radius: 50%;
+}
+.nb {
+	background-color: rgb(35, 35, 35);
+	overflow: hidden;
+	width: 100%;
+}
+.nb a {
+	float: left;
+	padding: 14px 16px;
+	text-decoration: none;
+	color: #f2f2f2;
+	text-align: center;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+}
+.nb a:hover {
+	background-color: #380ecf;
+	color: white;
+}
+@keyframes bgcolor {
+    0% {
+        background-color: rgba(255, 0, 0, 0.4);
+    }
+    10% {
+        background-color: rgba(251, 255, 0, 0.4);
+    }
+    30% {
+        background-color:  rgba(21, 255, 0, 0.4);
+    }
+
+    60% {
+        background-color:  rgba(0, 225, 255, 0.4);
+    }
+
+    90% {
+        background-color:  rgba(25, 0, 255, 0.4);
+    }
+    100% {
+        background-color:  rgba(255, 0, 242, 0.4);
+    }
+}
+  @media only screen and (max-width: 900px) {
+	.ModalContent {
+		width: 50%;
+	}
+}

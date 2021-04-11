@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@1,493&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100&display=swap" rel="stylesheet">
+      <title>CursorEffectsJS</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body onload="SetCursorSize()">
+      <div class="nb">
+         <a onclick="OpenModal()">🛠️ options</a>
+      </div>
+      <div id="Modal" class="Modal">
+         <div class="ModalContent">
+            <span class="ModalTitle">Settings</span><span class="ModalClose"><img src="Data/cancel.svg" onclick="CloseModal()"></span>
+            <br><br>
+            <input type="checkbox" id="BlurCB">
+            <label>Blur effect</label>
+            <br>
+            <input type="checkbox" id="GrayScaleCB">
+            <label>Grayscale effect</label>
+            <br>
+            <input type="checkbox" id="RainbowCB">
+            <label>Rainbow fill effect</label>
+            <br>
+            <label for="ColourPicker"> &#8287;Set cursor colour - </label> <label id="ColourLabelText"></label> <br>
+            <input type="color" class="ColourPicker" id="ColourPicker" value="#0000ff">
+            <br> 
+            <label>&#8287;Cursor size - </label> <label id="CursorsSizeLabel"></label><br>
+            <input type="range" min="20" max="250" value="50" class="slider" id="CursorSize">
+            <button onclick="ReloadPage()" class="BTN">Reset options</button>
+         </div>
+      </div>
+      <div class="OptionsMenu">
+      </div>
+      <div class="Image">
+         <img id="Image" src="Data/img.jpg">
+      </div>
+      <div class="BGcursor"></div>
+      <script src="Cursor.js"></script>
+   </body>
+</html>
