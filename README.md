@@ -1,7 +1,7 @@
 # CursorEffectsJS
 ```
 This is a very basic JavaScript project that simply changes the cursor and attempts to add some "effects" 
-via CSS classes , As you can see below this has a couple of effects and a small 'menu' to toggle them on/off.
+via CSS classes , As you can see below this has a couple of effects and a small 'menu' to toggle them on/off
 ```
 
  ![](https://github.com/HDzzzz/CursorEffectsJS/blob/main/Previews/00ee09b69a4d4740d4c0ad6adb13833e.gif?raw=true)
